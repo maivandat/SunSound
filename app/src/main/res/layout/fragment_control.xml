@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sunasterisk.music_72.screen.fragment.playtrack.control.ControlViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/bg_control"
+        android:padding="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressControl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageLogoUser"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_app"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressControl" />
+
+        <TextView
+            android:id="@+id/textTrackName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="@string/title_audio"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/textUserName"
+            app:layout_constraintEnd_toStartOf="@+id/buttonPrevious"
+            app:layout_constraintStart_toEndOf="@+id/imageLogoUser"
+            app:layout_constraintTop_toTopOf="@+id/imageLogoUser" />
+
+        <TextView
+            android:id="@+id/textUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="@string/title_audio"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorGrayLight"
+            app:layout_constraintBottom_toBottomOf="@+id/imageLogoUser"
+            app:layout_constraintEnd_toStartOf="@+id/buttonPrevious"
+            app:layout_constraintStart_toEndOf="@+id/imageLogoUser" />
+
+        <ImageButton
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_next_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageLogoUser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageLogoUser" />
+
+        <CheckBox
+            android:id="@+id/cbActionPlayTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/cb_action_control"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonNext"
+            app:layout_constraintEnd_toStartOf="@+id/buttonNext"
+            app:layout_constraintTop_toTopOf="@+id/buttonNext" />
+
+        <ImageButton
+            android:id="@+id/buttonPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_previous_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cbActionPlayTrack"
+            app:layout_constraintEnd_toStartOf="@+id/cbActionPlayTrack"
+            app:layout_constraintTop_toTopOf="@+id/cbActionPlayTrack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

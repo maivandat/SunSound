@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <SeekBar
+        android:id="@+id/seekBarTime"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_15"
+        android:progressDrawable="@drawable/sb_time_background"
+        android:thumb="@drawable/cb_time_thumb"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCurrentDuration" />
+
+    <CheckBox
+        android:id="@+id/cbActionPlayTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/cb_action_play_track"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTime" />
+
+    <CheckBox
+        android:id="@+id/cbShuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/cb_shuffle"
+        app:layout_constraintBottom_toBottomOf="@+id/cbActionPlayTrack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toEndOf="@+id/cbActionPlayTrack"
+        app:layout_constraintTop_toTopOf="@+id/cbActionPlayTrack"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/buttonPrevious"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_previous_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cbActionPlayTrack"
+        app:layout_constraintEnd_toStartOf="@+id/cbActionPlayTrack"
+        app:layout_constraintStart_toEndOf="@+id/buttonLoop"
+        app:layout_constraintTop_toTopOf="@+id/cbActionPlayTrack" />
+
+    <ImageButton
+        android:id="@+id/buttonNext"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_next_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cbActionPlayTrack"
+        app:layout_constraintEnd_toStartOf="@+id/cbShuffle"
+        app:layout_constraintStart_toEndOf="@+id/cbActionPlayTrack"
+        app:layout_constraintTop_toTopOf="@+id/cbActionPlayTrack" />
+
+    <ImageButton
+        android:id="@+id/buttonLoop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_non_repeat_50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cbActionPlayTrack"
+        app:layout_constraintEnd_toStartOf="@+id/cbActionPlayTrack"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cbActionPlayTrack"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textCurrentDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="@dimen/dp_10"
+        android:text="@string/value_default_time"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:padding="@dimen/dp_10"
+        android:text="@string/value_default_time"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

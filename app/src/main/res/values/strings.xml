@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Music</string>
+    <string name="title_genres">GENRES</string>
+    <string name="title_genre_name">Genre Name</string>
+    <string name="title_tracks_total">Tracks Total</string>
+    <string name="title_home">Home</string>
+    <string name="title_library">Library</string>
+    <string name="title_search">Search</string>
+    <string name="title_tracks">Tracks</string>
+    <string name="title_play_track">Now Playing</string>
+    <string name="title_previous">Previous</string>
+    <string name="title_next">Next</string>
+    <string name="title_pause">Pause</string>
+    <string name="title_play">Play</string>
+    <string name="title_stop">Stop</string>
+    <string name="title_lyric_series">Lyric Series</string>
+    <string name="title_download">Download</string>
+    <string name="title_audio">Audio</string>
+    <string name="value_default_time">00:00</string>
+    <string name="title_input_track">Input track</string>
+    <string name="title_next_song">Next song</string>
+    <string name="title_previous_song">Previous song</string>
+    <string name="message_downloaded">This song you have already downloaded</string>
+</resources>
